@@ -1,46 +1,65 @@
 .game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .score {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
-  }
-  
-  .game-board {
-    display: grid;
-    grid-template-rows: repeat(20, 25px);
-    grid-template-columns: repeat(20, 25px);
-    gap: 1px;
-    background-color: black;
-    border: 2px solid white;
-  }
-  
-  .cell {
-    width: 25px;
-    height: 25px;
-    background-color: #222;
-    border-radius: 3px;
-  }
-  
-  .snake-cell {
-    background-color: limegreen;
-  }
-  
-  .fruit-cell {
-    background-color: red;
-  }
-  
-  .game-over {
-    font-size: 28px;
-    font-weight: bold;
-    color: red;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+  text-align: center;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Fill the full viewport height */
+  box-sizing: border-box;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(20, 25px); /* Adjust cell size */
+  grid-gap: 2px; /* Gap between cells */
+  margin: 20px auto;
+  background-color: #ecf0f1;
+  border: 2px solid #2c3e50;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.cell {
+  width: 25px; /* Cell width */
+  height: 25px; /* Cell height */
+  background-color: #bdc3c7; /* Default background */
+  border-radius: 3px; /* Rounded edges */
+}
+
+.cell.snake {
+  background-color: #27ae60; /* Snake color */
+}
+
+.cell.fruit {
+  background-color: #e74c3c; /* Fruit color */
+  border-radius: 50%; /* Make fruit circular */
+}
+
+.name-input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 80%; /* Full width input */
+}
+
+.start-button,
+.restart-button {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.start-button:hover,
+.restart-button:hover {
+  background-color: #219150; /* Darker green for hover effect */
+}
